@@ -22,10 +22,10 @@ namespace EmptyProj
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
             //app.Run(async (context) =>
             //{
