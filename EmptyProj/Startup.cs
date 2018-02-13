@@ -21,17 +21,21 @@ namespace EmptyProj
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //app.UseDefaultFiles();
-            app.UseStaticFiles();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            //app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+
             app.UseMvc(route =>
-               route.MapRoute("default", "{controller}/{action}/{id?}",
-               new { Controller = "App", Action = "Index" }
-               ));
+            {
+                route.MapRoute("Default",
+                "{controller}/{action}/{id?}",
+                new { controller = "App", Action = "Index" });
+            });
 
         }
     }

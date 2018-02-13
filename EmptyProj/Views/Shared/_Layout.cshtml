@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    
+</head>
+<body>
+    <section>
+        Welcome to Dutch Treat<br />
+        <header><h1>@ViewBag.Title</h1></header>
+
+        
+        @RenderBody()
+    </section>
+    <footer>(c) 2018 fox-graphics.com</footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/index.js"></script>
+
+</body>
+</html>
