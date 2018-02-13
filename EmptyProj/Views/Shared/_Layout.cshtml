@@ -7,11 +7,18 @@
     
 </head>
 <body>
+    <menu>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/app/about">About</a></li>
+            <li><a href="/app/contact">Contact Us</a></li>
+        </ul>
+    </menu>
+    <header>
+        <h1>Welcome to Dutch Treat</h1>
+    </header>
     <section>
-        Welcome to Dutch Treat<br />
-        <header><h1>@ViewBag.Title</h1></header>
-
-        
+        <h2>@ViewBag.Title</h2>
         @RenderBody()
     </section>
     <footer>(c) 2018 fox-graphics.com</footer>
