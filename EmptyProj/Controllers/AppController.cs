@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using EmptyProj.ViewModels;
 
 namespace EmptyProj.Controllers
 {
@@ -13,7 +14,15 @@ namespace EmptyProj.Controllers
             return View();
         }
 
+        [HttpGet("contact")]
         public IActionResult Contact()
+        {
+            ViewBag.Title = "Contact Us";
+            return View();
+        }
+
+        [HttpPost("contact")]
+        public IActionResult Contact(ContactViewModel model)
         {
             ViewBag.Title = "Contact Us";
             return View();
