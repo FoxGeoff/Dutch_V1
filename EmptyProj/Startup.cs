@@ -25,6 +25,10 @@ namespace EmptyProj
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
 
             //app.UseDefaultFiles();
             app.UseStaticFiles();
