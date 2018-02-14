@@ -24,7 +24,14 @@ namespace EmptyProj.Controllers
         [HttpPost("contact")]
         public IActionResult Contact(ContactViewModel model)
         {
-            ViewBag.Title = "Contact Us";
+            if (ModelState.IsValid)
+            {
+                //Send Email
+            }
+            else
+            {
+                //Show errors
+            }
             return View();
         }
 
