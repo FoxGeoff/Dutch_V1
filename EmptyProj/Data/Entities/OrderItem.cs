@@ -1,4 +1,4 @@
-﻿namespace DutchTreat.Data.Entities
+﻿namespace EmptyProj.Data.Entities
 {
   public class OrderItem
   {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace DutchTreat.Data.Entities
+namespace EmptyProj.Data.Entities
 {
   public class StoreUser : IdentityUser
   {
