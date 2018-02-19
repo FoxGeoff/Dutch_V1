@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace EmptyProj.Data
 {
-    public class DuchContext : DbContext
+    public class DutchContext : DbContext
     {
-        public DuchContext(DbContextOptions options ):base(options)
+        public DutchContext(DbContextOptions options) : base(options)
         {
         }
 
-        DbSet<Product> Products { get; set; }
-        DbSet<Order> Orders { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
