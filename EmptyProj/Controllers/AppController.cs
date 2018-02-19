@@ -5,16 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EmptyProj.ViewModels;
 using EmptyProj.Services;
+using EmptyProj.Data;
 
 namespace EmptyProj.Controllers
 {
     public class AppController : Controller
     {
         private readonly IMailService _mailService;
+        private readonly DutchContext _context;
 
-        public AppController(IMailService mailService)
+        public AppController(IMailService mailService, DutchContext context )
         {
             _mailService = mailService;
+            _context = context;
         }
         public IActionResult Index()
         {
@@ -43,6 +46,15 @@ namespace EmptyProj.Controllers
                 //Show errors
             }
             return View();
+        }
+
+        public IActionResult Shop()
+        {
+            var results = _context.Products
+                .OrderBy(p => p.Category)
+                .ToList();
+
+            return View(results);
         }
 
         public IActionResult About()
